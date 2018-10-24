@@ -33,7 +33,9 @@ def index_photos(username, password):
 
     #Nav to photos I'm tagged in page
     print("-"*20 + "\nScanning Photos...")
-    driver.find_element_by_id("navItem_2305272732").click()
+    #driver.find_element_by_id("navItem_2305272732").click()
+    #driver.find_element_by_id("navItem_565536102").click()
+    driver.get('https://www.facebook.com/rileyz/photos')
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, "uiMediaThumbImg")))
     driver.find_elements_by_css_selector(".uiMediaThumbImg")[0].click()
     time.sleep(2)
